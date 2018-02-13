@@ -1,0 +1,9 @@
+---
+# defaults file for telegraf
+
+telegraf_version: ""
+telegraf_package_state: present
+
+# Used only for RedHat/CentOS.
+influx_yum_repo_url: https://repos.influxdata.com/rhel/$releasever/$basearch
+influx_yum_release_channel: stable

@@ -1,0 +1,12 @@
+---
+# tasks file for telegraf 
+
+- include: os/rhel.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Install telegraf 
+  package:
+    name: "telegraf-{{ telegraf_version }}"
+    state: "{{ telegraf_package_state }}"
+  become: yes
+  notify: Restart Telegraf
